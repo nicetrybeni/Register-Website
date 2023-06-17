@@ -8,10 +8,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   // Delete the record from the "users" table
   $sql = "DELETE FROM users WHERE id = '$id'";
 
-  if (mysqli_query($connection, $sql)) {
+  if ($connection->query($sql) === TRUE) {
     $_SESSION['success_message'] = "Record deleted successfully";
   } else {
-    echo "Error: " . $sql . "<br>" . mysqli_error($connection);
+    echo "Error: " . $sql . "<br>" . $connection->error;
   }
 
   // Redirect to the update.php page or display a success message
