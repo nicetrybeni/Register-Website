@@ -1,6 +1,5 @@
 <?php 
 #CREATE 
-// recap  create.php 
 include "config.php";
 session_start();
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -24,7 +23,6 @@ exit();
 ?>
 <?php
 #UPDATE
-// recap update.php 
 include "config.php";
 session_start();
 //validation starts here 
@@ -47,7 +45,6 @@ $sql = "UPDATE users SET username='$username' WHERE id=$id";
 ?>
 <?php
 #DELETE
-//recap delete.php
 include "config.php";
 session_start();
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
