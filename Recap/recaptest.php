@@ -3,7 +3,7 @@
 include "config.php";
 session_start();
 
-if($_SERVER"REQUEST_METHOD" == "POST") {
+if($_SERVER["REQUEST_METHOD"] == "POST") {
     
     $username = isset($_POST['username']) ? $_POST['username']: '';
 
@@ -14,7 +14,7 @@ $sql = "INSERT INTO users (username) values ($username)";
     }else{
         echo "Error :" . $sql . "<br>" . $connection->error;
     }
-    exti();
+    exit();
 }
 ?>
 <?php
